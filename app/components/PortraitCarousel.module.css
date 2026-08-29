@@ -1,0 +1,7 @@
+.root{aspect-ratio:3/4;margin:0;overflow:hidden;background:#050505;position:relative}
+.track{height:400%;display:flex;flex-direction:column;animation:portrait-scroll 15s cubic-bezier(.72,0,.28,1) infinite;will-change:transform}
+.slide{flex:0 0 25%;min-height:0;display:grid;place-items:center;background:#050505}
+.slide img{display:block;width:100%;height:100%;object-fit:contain}
+.slide.fill img{object-fit:cover}
+@keyframes portrait-scroll{0%,25%{transform:translate3d(0,0,0)}33.333%,58.333%{transform:translate3d(0,-25%,0)}66.666%,91.666%{transform:translate3d(0,-50%,0)}100%{transform:translate3d(0,-75%,0)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
